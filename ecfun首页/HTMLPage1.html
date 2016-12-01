@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header id="main-header">
+        <div id="header-content">
+            <h1 id="img-wrapper">
+                <a href="#">
+                    <img id="logo" src="logo.png"/>
+                </a>
+            </h1>
+            <nav id="main-nav">
+                <ul class="main-ul">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">趣漫画</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">国漫</a></li>
+                            <li><a href="#">日漫</a></li>
+                            <li><a href="#">欧美</a></li>
+                            <li><a href="#">原创</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">趣文章</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">笑话</a></li>
+                            <li><a href="#">趣文</a></li>
+                            <li><a href="#">段子</a></li>
+                            <li><a href="#">热评</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">趣图片</a></li>
+                    <li><a href="#">趣视频</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">电影</a></li>
+                            <li><a href="#">动漫</a></li>
+                            <li><a href="#">综艺</a></li>
+                            <li><a href="#">原创</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">趣社区</a></li>
+                </ul>
+            </nav>
+            <form id="search-function" name="search" method="get" action="">
+                    <input id="search-text" type="text" name="search-content" required="required" placeholder="搜索感兴趣的内容"/>
+                    <input id="search-button" type="submit" value=""/>
+
+            </form>
+            <script>
+            $(document).ready(function () {
+            $(".main-ul").children("li:has(ul)").hover(
+                function () {
+                    $(this).children("ul").slideDown();
+                    $(this).children("a").css("background-color", "#383838");
+                },
+                function () {
+
+                    $(this).children("ul").hide();
+                    $(this).children("a").css("background-color", "#272622");
+                }
+
+                );
+
+                });
+            </script>
+        </div>  
+        </header>
+        <section id="main-body">
+            <section id="content-row">
+                
+
+            </section>
+            <aside id="login-panel">
+
+
+            </aside>
+
+
+        </section>
+
+
+    </div>
+</body>
+</html>
